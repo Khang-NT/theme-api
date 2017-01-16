@@ -1,5 +1,7 @@
 #! /bin/bash
 
+echo "-------> Gitbook theme-api build script"
+
 # Cleanup folder
 rm -rf assets
 
