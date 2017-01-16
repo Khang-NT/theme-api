@@ -20,8 +20,7 @@
     "uglify-js": "2.6.1"
   },
   "scripts": {
-    "preinstall": "./src/build.sh",
-    "prepublish": "./src/build.sh"
+    "preinstall": "./src/build.sh"
   },
   "repository": {
     "type": "git",
