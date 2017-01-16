@@ -1,7 +1,7 @@
 {
-  "name": "gitbook-plugin-theme-api",
+  "name": "gitbook-plugin-theme-api-khangnt",
   "description": "Theme for using GitBook as an API documentation",
-  "version": "1.1.3",
+  "version": "1.1.5",
   "engines": {
     "gitbook": ">=3.0.4"
   },
@@ -12,22 +12,29 @@
     "q": "1.4.1",
     "q-plus": "0.0.8"
   },
+  "devDependencies": {
+    "eslint": "2.9.0",
+    "less": "2.6.0",
+    "less-plugin-clean-css": "^1.5.1",
+    "preboot": "git+https://github.com/mdo/preboot.git#4aab4edd85f076d50609cbe28e4fe66cc0771701",
+    "uglify-js": "2.6.1"
+  },
   "scripts": {
-    "preinstall": "./src/build.sh"
+    "prepublish": "./src/build.sh"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/Khang-NT/theme-api.git"
   },
-  "author": "FriendCode Inc. <contact@gitbook.com>",
+  "author": "Khang-NT <khang.neon.1997@gmail.com>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/GitbookIO/theme-api/issues"
+    "url": "https://github.com/Khang-NT/theme-api/issues"
   },
   "contributors": [
     {
-      "name": "Johan Preynat",
-      "email": "johan@gitbook.com"
+      "name": "Khang NT",
+      "email": "khang.neon.1997@gmail.com"
     }
   ],
   "gitbook": {
