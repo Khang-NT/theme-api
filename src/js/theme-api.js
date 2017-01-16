@@ -127,7 +127,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
     gitbook.events.bind('start', function(e, config) {
         var opts = config['theme-api'];
 
-        if (themeApi.enableSplitButton) {
+        if (opts.enableSplitButton) {
             // Create layout button in toolbar
             gitbook.toolbar.createButton({
                 icon: 'fa fa-columns',
