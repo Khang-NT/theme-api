@@ -20,8 +20,9 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
     // Instantiate localStorage
     function init(config) {
         themeApi = gitbook.storage.get('themeApi', {
-            split:       config.split,
-            currentLang: null
+            enableSplitButton:  config.enableSplitButton,
+            split:              config.split,
+            currentLang:         null
         });
     }
 
@@ -126,16 +127,18 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
     gitbook.events.bind('start', function(e, config) {
         var opts = config['theme-api'];
 
-        // Create layout button in toolbar
-        gitbook.toolbar.createButton({
-            icon: 'fa fa-columns',
-            label: 'Change Layout',
-            onClick: function() {
-                // Update layout
-                themeApi.split = !themeApi.split;
-                saveSettings();
-            }
-        });
+        if (themeApi.enableSplitButton) {
+            // Create layout button in toolbar
+            gitbook.toolbar.createButton({
+                icon: 'fa fa-columns',
+                label: 'Change Layout',
+                onClick: function() {
+                    // Update layout
+                    themeApi.split = !themeApi.split;
+                    saveSettings();
+                }
+            });
+        }
 
         // Initialize themes
         gitbook.fontsettings.setThemes(THEMES);
